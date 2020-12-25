@@ -21,11 +21,16 @@ function countdown () {
     houreEl.innerHTML = houres;
     minuteEl.innerHTML = minutes;
     secondEl.innerHTML = seconds;
+if(t.total<=0){
+            // Redirect if the Countdown is Over
+            window.location.href="https://www.google.com";
+        }
 
+    }
+
+    updateClock(); // run function once at first to avoid delay
+    var timeinterval = setInterval(updateClock,1000);
+}
 }
 
 countdown()
-
-setInterval(countdown, 1000)
-
-Location.assign('index2')
