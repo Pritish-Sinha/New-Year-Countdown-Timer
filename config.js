@@ -1,5 +1,5 @@
 <script type="text/javascript">
-var deadline = '1 Jan 2021';
+var deadline = '25 December 2020 14:05';
 
 function getTimeRemaining(endtime){
     var t = Date.parse(endtime) - Date.parse(new Date());
@@ -30,7 +30,7 @@ function initializeClock(id, endtime){
         minutesSpan.innerHTML = t.minutes;
         secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
         if(t.total<=0){
-                      window.location.href="index.html";
+                      window.location.href="www.google.com";
         }
 
     }
