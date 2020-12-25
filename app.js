@@ -23,23 +23,7 @@ function countdown () {
     secondEl.innerHTML = seconds;
 
 }
-function DelayRedirect() {
-    var seconds = 0;
-    var countdown = document.getElementById("countdown");
-    var lblcount = document.getElementById("lblcount");
-   countdown.style.display = "block";
-    lblCount.innerHTML = seconds;
-    setInterval(function () {
-        seconds--;
-        lblCount.innerHTML = seconds;
-        if (seconds == 0) {
-            dvCountDown.style.display = "none";
-            window.location = "//www.google.com/";
-        }
-    }, 1000);
-}
 
 countdown()
-DelayRedirect()
 
 setInterval(countdown, 1000)
