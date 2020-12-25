@@ -1,5 +1,5 @@
 <script type="text/javascript">
-var deadline = '25 December 2020 14:05';
+var deadline = 'December 25 2020 14:08';
 
 function getTimeRemaining(endtime){
     var t = Date.parse(endtime) - Date.parse(new Date());
