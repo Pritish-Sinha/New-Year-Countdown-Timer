@@ -1,4 +1,4 @@
-const newYear = '1 Jan 2021'
+const newYear = '26 Dec 2020'
 
 const dayEl = document.querySelector('.day')
 const houreEl = document.querySelector('.hour')
@@ -27,3 +27,5 @@ function countdown () {
 countdown()
 
 setInterval(countdown, 1000)
+
+Location.assign('index2')
