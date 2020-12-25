@@ -24,6 +24,7 @@ margin-top: 8rem;
     letter-spacing: 5px;
     font-size: 50px;
     color:rgb(250,102,0);
+    font-style: url('./01.TTF');
 }
 
 .countdown-items{
