@@ -1,4 +1,4 @@
-const newYear = '1 Jan 2021'
+cconst newYear = '1 Jan 2021'
 
 const dayEl = document.querySelector('.day')
 const houreEl = document.querySelector('.hour')
@@ -21,16 +21,9 @@ function countdown () {
     houreEl.innerHTML = houres;
     minuteEl.innerHTML = minutes;
     secondEl.innerHTML = seconds;
-if(t.total<=0){
-            // Redirect if the Countdown is Over
-            window.location.href="https://www.google.com";
-        }
 
-    }
-
-    updateClock(); // run function once at first to avoid delay
-    var timeinterval = setInterval(updateClock,1000);
-}
 }
 
 countdown()
+
+setInterval(countdown, 1000)
