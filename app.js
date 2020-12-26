@@ -1,4 +1,4 @@
-const newYear = '26 Dec 2020 19:53'
+const newYear = '26 Dec 2020 20:20'
 
 const dayEl = document.querySelector('.day')
 const houreEl = document.querySelector('.hour')
@@ -21,7 +21,6 @@ function countdown () {
     houreEl.innerHTML = houres;
     minuteEl.innerHTML = minutes;
     secondEl.innerHTML = seconds;
-
 }
 
 countdown()
