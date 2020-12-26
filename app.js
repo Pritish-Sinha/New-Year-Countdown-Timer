@@ -1,9 +1,10 @@
-const newYear = '26 Dec 2020 21:10'
+const newYear = '26 Dec 2020 22:05'
 
 const dayEl = document.querySelector('.day')
 const houreEl = document.querySelector('.hour')
 const minuteEl = document.querySelector('.minute')
 const  secondEl = document.querySelector('.second')
+let timeRemaining = true //Flag to check if time is greater than 0, so that we can stop setInterval when it's new year
 
 function countdown () {
     const newYearsDate = new Date(newYear)
@@ -12,18 +13,25 @@ function countdown () {
     let totalSeconds = (newYearsDate - currentDate) / 1000;
 
     let days = Math.floor(totalSeconds / 3600  / 24);
-    let houres = Math.floor( totalSeconds/ 3600)% 24;
+    let hours = Math.floor( totalSeconds/ 3600)% 24;
     let minutes = Math.floor(totalSeconds / 60) % 60;
     let seconds = Math.floor(totalSeconds ) % 60;
 
+    // Check if time is days, hours, minutes, seconds are 0, then open new page in same tab.
+    if(days, hours, minutes, seconds === 0){
+        window.open("jump.html","_self")
+        timeRemaining = false
+    }
 
-    dayEl.innerHTML = days;
-    houreEl.innerHTML = houres;
-    minuteEl.innerHTML = minutes;
-    secondEl.innerHTML = seconds;
+    dayEl.innerHTML = days>0?days:"0";  //if days is greater than 0, then update else put 0
+    houreEl.innerHTML = hours>0?hours:"0";  //if hours is greater than 0, then update else put 0
+    minuteEl.innerHTML = minutes>0?minutes:"0";  //if minutes is greater than 0, then update else put 0
+    secondEl.innerHTML = seconds>0?seconds:"0";   //if seconds is greater than 0, then update else put 0
 }
 
 countdown()
 
-setInterval(countdown, 1000)
+if(timeRemaining){
+    setInterval(countdown, 1000)
+}
 
