@@ -1,15 +1,30 @@
-var deadline = new Date("Dec 26, 2020 20:40:25").getTime(); 
-var x = setInterval(function() { 
-var now = new Date().getTime(); 
-var t = deadline - now; 
-var days = Math.floor(t / (1000 * 60 * 60 * 24)); 
-var hours = Math.floor((t%(1000 * 60 * 60 * 24))/(1000 * 60 * 60)); 
-var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60)); 
-var seconds = Math.floor((t % (1000 * 60)) / 1000); 
-document.getElementById("demo").innerHTML = days + "d "  
-+ hours + "h " + minutes + "m " + seconds + "s "; 
-    if (t < 0) { 
-        clearInterval(x); 
-        document.getElementById("demo").innerHTML = "EXPIRED"; 
-    } 
-}, 1000); 
+const newYear = '26 Dec 2020 19:53'
+
+const dayEl = document.querySelector('.day')
+const houreEl = document.querySelector('.hour')
+const minuteEl = document.querySelector('.minute')
+const  secondEl = document.querySelector('.second')
+
+function countdown () {
+    const newYearsDate = new Date(newYear)
+    const currentDate = new Date()
+
+    let totalSeconds = (newYearsDate - currentDate) / 1000;
+
+    let days = Math.floor(totalSeconds / 3600  / 24);
+    let houres = Math.floor( totalSeconds/ 3600)% 24;
+    let minutes = Math.floor(totalSeconds / 60) % 60;
+    let seconds = Math.floor(totalSeconds ) % 60;
+
+
+    dayEl.innerHTML = days;
+    houreEl.innerHTML = houres;
+    minuteEl.innerHTML = minutes;
+    secondEl.innerHTML = seconds;
+
+}
+
+countdown()
+
+setInterval(countdown, 1000)
+
