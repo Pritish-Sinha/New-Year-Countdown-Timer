@@ -1,4 +1,4 @@
-const newYear = '28 Dec 2020 20:42'
+const newYear = '28 Dec 2020 20:49'
 
 const dayEl = document.querySelector('.day')
 const houreEl = document.querySelector('.hour')
