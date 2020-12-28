@@ -18,7 +18,7 @@ function countdown () {
     let seconds = Math.floor(totalSeconds ) % 60;
 
     // Check if time is days, hours, minutes, seconds are 0, then open new page in same tab.
-    if(days, hours, minutes, seconds === 0){
+    if(days && hours && minutes && seconds === 0){
         window.open("jump.html","_self")
         timeRemaining = false
     }
