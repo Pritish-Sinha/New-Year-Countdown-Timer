@@ -16,6 +16,10 @@ body{
 
     
 }
+.music-box{
+align-item: bottom;
+color:rgb(250,102,0);}
+
 .countdown-box{
 margin-top: 8rem;
 }
