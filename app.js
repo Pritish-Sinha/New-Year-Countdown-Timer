@@ -18,11 +18,11 @@ function countdown () {
     let seconds = Math.floor(totalSeconds ) % 60;
 
     // Check if time is days, hours, minutes, seconds are 0, then open new page in same tab.
- {{{ { if(days && hours && minutes && seconds === 0){
+  if(days&&hours&&minutes&&seconds===0){
         window.open("jump.html","_self")
         timeRemaining = false
-    }}}}
-}
+    }
+
 
     dayEl.innerHTML = days>0?days:"0";  //if days is greater than 0, then update else put 0
     houreEl.innerHTML = hours>0?hours:"0";  //if hours is greater than 0, then update else put 0
